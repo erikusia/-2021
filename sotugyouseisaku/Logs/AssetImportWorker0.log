@@ -1,37 +1,46 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19042.1110; Version 2009; 64bit' Language: 'ja' Physical Memory: 16325 MB
+OS: 'Windows 10 Home; OS build 17134.1304; Version 1803; 64bit' Language: 'ja' Physical Memory: 8057 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.11f1\Editor\Unity.exe
+D:\Unity\Unity2020.3.11\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/kaede/OneDrive/デスクトップ/team02/sotugyouseisaku
+C:/Users/小礒　仁志/Documents/-2021/sotugyouseisaku
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 62385
 Successfully changed project path to: C:/Users/kaede/OneDrive/デスクトップ/team02/sotugyouseisaku
 C:/Users/kaede/OneDrive/デスクトップ/team02/sotugyouseisaku
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 32.58 ms, found 2 plugins.
+=======
+53617
+Successfully changed project path to: C:/Users/小礒　仁志/Documents/-2021/sotugyouseisaku
+C:/Users/小礒　仁志/Documents/-2021/sotugyouseisaku
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 40.27 ms, found 2 plugins.
+>>>>>>> master
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/kaede/OneDrive/デスクトップ/team02/sotugyouseisaku/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/Unity2020.3.11/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/小礒　仁志/Documents/-2021/sotugyouseisaku/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
+    Renderer: Intel(R) Iris(R) Plus Graphics 640 (ID=0x5926)
     Vendor:   
-    VRAM:     6052 MB
-    Driver:   27.21.14.6677
+    VRAM:     4028 MB
+    Driver:   27.20.100.8682
 Initialize mono
+<<<<<<< HEAD
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
@@ -46,14 +55,61 @@ Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 31.02 ms, found 2 plugins.
+=======
+Mono path[0] = 'D:/Unity/Unity2020.3.11/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Unity2020.3.11/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/Unity2020.3.11/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56700
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/Unity2020.3.11/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001618 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 50.34 ms, found 2 plugins.
+>>>>>>> master
 Preloading 0 native plugins for Editor in 0.00 ms.
+Unable to find bridge dll in registry for Microsoft Visual Studio Tools for Unity for C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Completed reload, in  1.371 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 Registered in 0.004840 seconds.
+=======
+- Completed reload, in  1.265 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005743 seconds.
+>>>>>>> master
 Begin MonoManager ReloadAssembly
+Symbol file data-000002087284FA50 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872A82260 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020875DD4030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872F2D240 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020874FFB020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872C47C50 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020873199010 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872F2D240 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872C47C50 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020875DD4030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872DA5CF0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872A23DD0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872CD6150 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
+<<<<<<< HEAD
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
@@ -65,12 +121,24 @@ Platform modules already initialized, skipping
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
 Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+=======
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.037 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+>>>>>>> master
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1387 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 67.9 MB.
-System memory in use after: 68.0 MB.
+System memory in use before: 65.3 MB.
+System memory in use after: 65.3 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1823.
+<<<<<<< HEAD
 Total: 2.529100 ms (FindLiveObjects: 0.372700 ms CreateObjectMapping: 0.163300 ms MarkObjects: 1.916800 ms  DeleteObjects: 0.074500 ms)
 
 ========================================================================
@@ -277,10 +345,69 @@ Received Import Request.
   artifactKey: Guid(cdc2f2cf3b64f884e88745604d95f11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/LowPolySoldiers_demo/models/Materials/demo_weapon.tga using Guid(cdc2f2cf3b64f884e88745604d95f11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83056fae52b5f27b62e542415f061ad9') in 0.018258 seconds
   Import took 0.021237 seconds .
+=======
+Total: 2.991108 ms (FindLiveObjects: 0.241333 ms CreateObjectMapping: 0.071555 ms MarkObjects: 2.553776 ms  DeleteObjects: 0.123111 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefab
+  artifactKey: Guid(b4def744855ddd14f8b901a0497f8acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab using Guid(b4def744855ddd14f8b901a0497f8acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc2ebba5c600da55afa1277e70f73449') in 0.015008 seconds
+  Import took 0.018150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 50.779364 seconds.
+  path: Assets/True_Horror
+  artifactKey: Guid(324effb301c5e5f4c8e8b73ec694217c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/True_Horror using Guid(324effb301c5e5f4c8e8b73ec694217c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a5dc5f0a5d8ab9bb1e8238798a8787') in 0.019185 seconds
+  Import took 0.022924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.964124 seconds.
+  path: Assets/True_Horror/True_Crawler
+  artifactKey: Guid(955a9ccaeb3eb18418e1a7dbd370e0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/True_Horror/True_Crawler using Guid(955a9ccaeb3eb18418e1a7dbd370e0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8c079b5c43df1f38a1b273b7c9083fc') in 0.018732 seconds
+  Import took 0.023030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071665 seconds.
+  path: Assets/True_Horror/True_Crawler/crawler.fbx
+  artifactKey: Guid(aa723b44260e74040869a722c46a85c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/True_Horror/True_Crawler/crawler.fbx using Guid(aa723b44260e74040869a722c46a85c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc069afc63712acd4210196d48ae873') in 0.594702 seconds
+  Import took 0.598428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.738314 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(504db83c3e859a94886385c67de77fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(504db83c3e859a94886385c67de77fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c43e90f6cb4411418e1991f3ba714b8') in 0.020762 seconds
+  Import took 0.025672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.710160 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(7b3e9ef58e5ef374ca992b3fed1d4580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(7b3e9ef58e5ef374ca992b3fed1d4580) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e90855c11b0cb293dad03e2cfd44ae') in 0.016835 seconds
+  Import took 0.021163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.931589 seconds.
+  path: Assets/Scripts/Enemy.cs
+  artifactKey: Guid(641ba391bca36b54fa9f6741b00e470f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy.cs using Guid(641ba391bca36b54fa9f6741b00e470f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd25fd430fe4a09f49abac186466b1a8') in 0.040740 seconds
+  Import took 0.044004 seconds .
+>>>>>>> master
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.005066 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -323,10 +450,55 @@ Received Import Request.
   artifactKey: Guid(9b6a9eb6bda6932488e201b8e1f5c3df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/Player1.cs using Guid(9b6a9eb6bda6932488e201b8e1f5c3df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6edc595b80bf25b1caf5d05ecb459a0') in 0.008907 seconds
   Import took 0.012768 seconds .
+=======
+Registered in 0.005676 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020872A92280 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020874FD7020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878E39050 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872870CC0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878268CE0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020876376020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878E75170 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020876376020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878D1C620 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878F1E8B0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020875370020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087858C010 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878C77030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.185 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1383 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.1 MB.
+System memory in use after: 82.2 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1838.
+Total: 1.787554 ms (FindLiveObjects: 0.144000 ms CreateObjectMapping: 0.040000 ms MarkObjects: 1.576443 ms  DeleteObjects: 0.025778 ms)
+>>>>>>> master
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.004453 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -411,10 +583,63 @@ System memory in use after: 71.4 MB.
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1895.
 Total: 2.346300 ms (FindLiveObjects: 0.161500 ms CreateObjectMapping: 0.047300 ms MarkObjects: 2.114400 ms  DeleteObjects: 0.022000 ms)
+=======
+Registered in 0.006521 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020878E71A00 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087936B1F0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020879150B30 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020876376020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878268AD0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087936B1F0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878C0C4C0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020876376020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878D1C620 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872F35250 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087616E040 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020875DD4030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000208780AA030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.055 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1383 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.2 MB.
+System memory in use after: 82.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1841.
+Total: 1.858665 ms (FindLiveObjects: 0.151111 ms CreateObjectMapping: 0.047111 ms MarkObjects: 1.642221 ms  DeleteObjects: 0.017333 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.176865 seconds.
+  path: Assets/True_Horror/Enemy.controller
+  artifactKey: Guid(8832be3e8ffbe0543a1edebe3854faa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/True_Horror/Enemy.controller using Guid(8832be3e8ffbe0543a1edebe3854faa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e058213b8c4070b31e8d178269f1f82') in 0.042253 seconds
+  Import took 0.046180 seconds .
+>>>>>>> master
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.005582 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -455,10 +680,55 @@ System memory in use after: 71.4 MB.
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1901.
 Total: 1.972500 ms (FindLiveObjects: 0.150400 ms CreateObjectMapping: 0.041900 ms MarkObjects: 1.758700 ms  DeleteObjects: 0.020400 ms)
+=======
+Registered in 0.022049 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020872C10040 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087645B020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878680040 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878899020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000208792E8D30 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087645B020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878E75170 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878899020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872F53A20 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878E38DE0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020873199010 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087858C010 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000208780AA030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.047 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1383 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.2 MB.
+System memory in use after: 82.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1844.
+Total: 2.024887 ms (FindLiveObjects: 0.188889 ms CreateObjectMapping: 0.051556 ms MarkObjects: 1.763554 ms  DeleteObjects: 0.019111 ms)
+>>>>>>> master
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.004660 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -477,5 +747,49 @@ System memory in use after: 71.4 MB.
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1904.
 Total: 2.134700 ms (FindLiveObjects: 0.161700 ms CreateObjectMapping: 0.043700 ms MarkObjects: 1.878000 ms  DeleteObjects: 0.050000 ms)
+=======
+Registered in 0.006173 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020878EDA530 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087645B020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000208732B5030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878899020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878801E60 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002087645B020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020879080FE0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878899020 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020872F53A20 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878E38DE0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020878268AB0 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020875DD4030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000208780AA030 doesn't match image C:\Users\小礒　仁志\Documents\-2021\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1383 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 82.2 MB.
+System memory in use after: 82.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1847.
+Total: 2.019998 ms (FindLiveObjects: 0.145333 ms CreateObjectMapping: 0.044000 ms MarkObjects: 1.811998 ms  DeleteObjects: 0.017333 ms)
+>>>>>>> master
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
