@@ -17,17 +17,49 @@ public class Player : MonoBehaviour
 
     private Vector3 currentRot = Vector3.zero;//現在の回転方向
 
-    float rotate_speed = 3.0f;
+    float rotSpeed = 3.0f;
+
+    private Quaternion charaRot;  //キャラクターの角度
+    //マウス移動のスピード
+    [SerializeField]
+    private float mouseSpeed = 2f;
+    //　キャラが回転中かどうか？
+    private bool charaRotFlag = false;
+    //　カメラの角度
+    private Quaternion cameraRot;
+
+
+    [SerializeField]
+    private bool cameraRotForward = true;
+    //　カメラの角度の初期値
+    private Quaternion initCameraRot;
+
+    //　キャラクター視点のカメラで回転出来る限度
+    [SerializeField]
+    private float cameraRotateLimit = 30f;
+
+    //　キャラクター視点のカメラ
+    private Transform myCamera;
+
     // Start is called before the first frame update
     void Start()
     {
         charaCon = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        charaRot = transform.localRotation;
+        myCamera = GetComponentInChildren<Camera>().transform;	//　キャラクター視点のカメラの取得
+        initCameraRot = myCamera.localRotation;
+        cameraRot = myCamera.localRotation;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //　キャラクターの向きを変更する
+        RotateChara();
+        //　視点の向きを変える
+        RotateCamera();
+
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
         
@@ -40,14 +72,6 @@ public class Player : MonoBehaviour
             animator.SetFloat("Forward", Input.GetAxis("Vertical"));
             animator.SetFloat("Lateral", Input.GetAxis("Horizontal"));
 
-            //if(Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
-            //{
-            //    this.animator.SetBool(key_isRun, true);
-            //}
-            //else
-            //{
-            //    this.animator.SetBool(key_isRun, false);
-            //}
 
             if (Input.GetButton("Jump"))
             {
@@ -59,26 +83,71 @@ public class Player : MonoBehaviour
         charaCon.Move(pos * Time.deltaTime);
 
     }
+    #region 回転お試し
+    //protected void Rotate()
+    //{
+    //    // 現在の移動ベクトルを取得
+    //    Vector3 moveVelocity = charaCon.velocity;
+    //    moveVelocity.y = 0;
 
-    protected void Rotate()
+    //    // 移動ベクトルが零ベクトル以外の場合は回転用ベクトルに設定
+    //    if (moveVelocity != Vector3.zero)
+    //    {
+    //        currentRot = moveVelocity;
+    //    }
+
+    //    // 角度と回転方向を取得
+    //    float value = Mathf.Min(1, rotate_speed * Time.deltaTime / Vector3.Angle(transform.forward, currentRot));
+    //    Vector3 newForward = Vector3.Slerp(transform.forward, currentRot, value);
+
+    //    if (newForward != Vector3.zero)
+    //    {
+    //        transform.rotation = Quaternion.LookRotation(newForward, transform.up);
+    //    }
+    //}
+    #endregion
+
+    //キャラクターの角度を変更
+    void RotateChara()
     {
-        // 現在の移動ベクトルを取得
-        Vector3 moveVelocity = charaCon.velocity;
-        moveVelocity.y = 0;
+        //横の回転値を計算
+        float yRot = Input.GetAxis("Mouse X") * mouseSpeed;
 
-        // 移動ベクトルが零ベクトル以外の場合は回転用ベクトルに設定
-        if (moveVelocity != Vector3.zero)
+        charaRot *= Quaternion.Euler(0f, yRot, 0f);
+
+        //キャラクターが回転しているかどうか？
+
+        if (yRot != 0f)
         {
-            currentRot = moveVelocity;
+            charaRotFlag = true;
+        }
+        else
+        {
+            charaRotFlag = false;
         }
 
-        // 角度と回転方向を取得
-        float value = Mathf.Min(1, rotate_speed * Time.deltaTime / Vector3.Angle(transform.forward, currentRot));
-        Vector3 newForward = Vector3.Slerp(transform.forward, currentRot, value);
+        //　キャラクターの回転を実行
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, charaRot, rotSpeed * Time.deltaTime);
+    }
 
-        if (newForward != Vector3.zero)
+    //　カメラの角度を変更
+    void RotateCamera()
+    {
+
+        float xRotate = Input.GetAxis("Mouse Y") * mouseSpeed;
+
+        //　マウスを上に移動した時に上を向かせたいなら反対方向に角度を反転させる
+        if (cameraRotForward)
         {
-            transform.rotation = Quaternion.LookRotation(newForward, transform.up);
+            xRotate *= -1;
         }
+        //　一旦角度を計算する	
+        cameraRot *= Quaternion.Euler(xRotate, 0f, 0f);
+        //　カメラのX軸の角度が限界角度を超えたら限界角度に設定
+        var resultYRot = Mathf.Clamp(Mathf.DeltaAngle(initCameraRot.eulerAngles.x, cameraRot.eulerAngles.x), -cameraRotateLimit, cameraRotateLimit);
+        //　角度を再構築
+        cameraRot = Quaternion.Euler(resultYRot, cameraRot.eulerAngles.y, cameraRot.eulerAngles.z);
+        //　カメラの視点変更を実行
+        myCamera.localRotation = Quaternion.Slerp(myCamera.localRotation, cameraRot, rotSpeed * Time.deltaTime);
     }
 }
