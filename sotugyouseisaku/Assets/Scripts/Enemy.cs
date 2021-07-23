@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniRx;
+using UniRx.Triggers;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,45 +15,48 @@ public class Enemy : MonoBehaviour
         JUMP,
     };
 
+    private Vector3 targetpos;
     private Animator animator;
     private const string key_work = "work";
 
-    public float moveSpeed = 0.2f;
-    public float rotateSpeed = 1;
+    [SerializeField] EnemyState type;
+    [SerializeField] float MaxHP=100;
+    float HP;
+    [SerializeField] float BulletDamage = 20;
 
-    public EnemyState type;
+    [SerializeField] GameObject target;
+
+    [SerializeField] float angle = 50;
 
     void Start()
     {
         this.animator = GetComponent<Animator>();
         this.type = EnemyState.IDLE;
+        HP = MaxHP;
+        targetpos = transform.position;
+    }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.tag=="Bullet")
+        {
+            HP -= BulletDamage;
+            Debug.Log("É_ÉÅÅ[ÉWéÛÇØÇΩ");
+            if(HP<=0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     void Update()
     {
+        this.animator.SetBool("walk", true);
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(0, -1 * rotateSpeed, 0);
-            this.animator.SetBool(key_work, false);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(0, 1 * rotateSpeed, 0, 0);
-            this.animator.SetBool(key_work, false);
-        }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.position += transform.forward * moveSpeed;
-            this.animator.SetBool(key_work, true);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.position += transform.forward * moveSpeed * -1;
-            this.animator.SetBool(key_work, true);
-        }
+        transform.RotateAround(
+            target.transform.position,
+            Vector3.up,
+            angle * Time.deltaTime
+            );
     }
 }
