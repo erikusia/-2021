@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &265086268 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5464599487723989945, guid: 441714cc484a45146a1891e2d4846122,
+    type: 3}
+  m_PrefabInstance: {fileID: 5464599488136492462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!850595691 &959362021
 LightingSettings:
@@ -326,7 +332,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -354,11 +360,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.877886, y: 1.95, z: -4.549491}
+  m_LocalPosition: {x: 0.03, y: 2.14, z: 0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 265086268}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502642041
 GameObject:
@@ -454,7 +460,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4032515586263805033
 PrefabInstance:
@@ -466,7 +472,7 @@ PrefabInstance:
     - target: {fileID: 4032515585985964584, guid: 0fa36839e8399e946b7ac0b534c90b5f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4032515585985964584, guid: 0fa36839e8399e946b7ac0b534c90b5f,
         type: 3}
@@ -535,7 +541,7 @@ PrefabInstance:
     - target: {fileID: 5464599487723989945, guid: 441714cc484a45146a1891e2d4846122,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5464599487723989945, guid: 441714cc484a45146a1891e2d4846122,
         type: 3}
@@ -591,6 +597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Soldier_demo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464599488360566148, guid: 441714cc484a45146a1891e2d4846122,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 441714cc484a45146a1891e2d4846122, type: 3}
