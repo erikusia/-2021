@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class AddForceBullet : MonoBehaviour
 {
-	//　カーソルに使用するテクスチャ
-	[SerializeField]
-	private Texture2D cursor;
 	//　弾のゲームオブジェクト
 	[SerializeField]
 	private GameObject bulletPrefab;
@@ -17,32 +14,45 @@ public class AddForceBullet : MonoBehaviour
 	[SerializeField]
 	private float bulletPower = 500f;
 
+	private Vector3 rayCameraPos;
+	private int count = 0;
+	[SerializeField]
+	private int rate = 20;
 	void Start()
 	{
-		//　カーソルを自前のカーソルに変更
-		Cursor.SetCursor(cursor, new Vector2(cursor.width / 2, cursor.height / 2), CursorMode.ForceSoftware);
+		rayCameraPos = new Vector3(Screen.width / 2, Screen.height / 2, 0.1f);
 	}
 
 	void Update()
 	{
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+#if UNITY_EDITOR
+		rayCameraPos = new Vector3(Screen.width / 2, Screen.height / 2, 0.1f);
+#endif
+
+		Ray ray = Camera.main.ScreenPointToRay(rayCameraPos);
+
+		//メインカメラからレイを出すデバッグ線
+		//Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+
 		transform.rotation = Quaternion.LookRotation(ray.direction);
-
 		RaycastHit hit;
-
-		if (Physics.Raycast(ray, out hit, 1f, LayerMask.GetMask("Gun")))
+		int layerMask = ~(1 << 6);
+		if (Physics.Raycast(ray, out hit, 1000.0f, layerMask))
 		{
-			Cursor.visible = false;
+			Vector3 distanc = hit.point - transform.position;
+			transform.rotation = Quaternion.LookRotation(distanc);
 		}
-		else
-		{
-			Cursor.visible = true;
-		}
+		
 
 		//　マウスの左クリックで撃つ
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButton("Fire1"))
 		{
-			Shot();
+			if (count % rate == 0)
+			{
+				Shot();
+			}
+			count += 1;
 		}
 	}
 
