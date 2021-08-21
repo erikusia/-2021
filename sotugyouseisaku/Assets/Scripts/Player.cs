@@ -17,12 +17,12 @@ public class Player : MonoBehaviour
 
     private Vector3 currentRot = Vector3.zero;//現在の回転方向
 
-    float rotSpeed = 3.0f;
+    public float rotSpeed = 3.0f;
 
     private Quaternion charaRot;  //キャラクターの角度
     //マウス移動のスピード
     [SerializeField]
-    private float mouseSpeed = 2f;
+    private float mouseSpeed = 2.0f;
     //　キャラが回転中かどうか？
     private bool charaRotFlag = false;
     //　カメラの角度
@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
 
     //　キャラクター視点のカメラ
     private Transform myCamera;
+
 
     // Start is called before the first frame update
     void Start()
@@ -60,8 +61,8 @@ public class Player : MonoBehaviour
         //　視点の向きを変える
         RotateCamera();
 
-        x = Input.GetAxis("Horizontal");
-        z = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Horizontal")*2.0f;
+        z = Input.GetAxis("Vertical")*2.0f;
         
         if (charaCon.isGrounded)
         {
@@ -111,7 +112,7 @@ public class Player : MonoBehaviour
     void RotateChara()
     {
         //横の回転値を計算
-        float yRot = Input.GetAxis("Mouse X") * mouseSpeed;
+        float yRot = Input.GetAxis("Horizontal2")*0.1f;
 
         charaRot *= Quaternion.Euler(0f, yRot, 0f);
 
@@ -127,14 +128,14 @@ public class Player : MonoBehaviour
         }
 
         //　キャラクターの回転を実行
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, charaRot, rotSpeed * Time.deltaTime);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, charaRot, rotSpeed);
     }
 
     //　カメラの角度を変更
     void RotateCamera()
     {
 
-        float xRotate = Input.GetAxis("Mouse Y") * mouseSpeed;
+        float xRotate = Input.GetAxis("Vertical2")*0.1f;
 
         //　マウスを上に移動した時に上を向かせたいなら反対方向に角度を反転させる
         if (cameraRotForward)
@@ -148,6 +149,6 @@ public class Player : MonoBehaviour
         //　角度を再構築
         cameraRot = Quaternion.Euler(resultYRot, cameraRot.eulerAngles.y, cameraRot.eulerAngles.z);
         //　カメラの視点変更を実行
-        myCamera.localRotation = Quaternion.Slerp(myCamera.localRotation, cameraRot, rotSpeed * Time.deltaTime);
+        myCamera.localRotation = Quaternion.Slerp(myCamera.localRotation, cameraRot, rotSpeed);
     }
 }
