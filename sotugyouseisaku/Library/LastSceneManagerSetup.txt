@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Kan.unity
+=======
+- path: Assets/Scenes/Kawashita.unity
+>>>>>>> kawashita
   isLoaded: 1
   isActive: 1
   isSubScene: 0
