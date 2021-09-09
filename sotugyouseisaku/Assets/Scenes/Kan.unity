@@ -579,6 +579,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 170110aa26fdec748ab0766b89aec058, type: 3}
+--- !u!114 &1209060308 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
+    type: 3}
+  m_PrefabInstance: {fileID: 1209060307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8dbc2db7c4e334ba7e555f679f4315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1681028614
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +757,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 612800177}
     m_Modifications:
+    - target: {fileID: 101928629, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 101928632, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
+      propertyPath: addForceBullet
+      value: 
+      objectReference: {fileID: 1209060308}
+    - target: {fileID: 366381115, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 755299967, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629393990, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
+      propertyPath: addForceBullet
+      value: 
+      objectReference: {fileID: 1209060308}
+    - target: {fileID: 1032817464374356104, guid: 27ae5e6873f0c1d49acb79dbcf7c598b,
+        type: 3}
+      propertyPath: addForceBullet
+      value: 
+      objectReference: {fileID: 1209060308}
     - target: {fileID: 1290875137690274129, guid: 27ae5e6873f0c1d49acb79dbcf7c598b,
         type: 3}
       propertyPath: m_Pivot.x
