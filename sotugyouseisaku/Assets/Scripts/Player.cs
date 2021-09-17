@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using DG.Tweening;
+
 public class Player : MonoBehaviour
 {
 
@@ -9,6 +11,7 @@ public class Player : MonoBehaviour
     public float jump = 2.0f; //ジャンプ
     public float g = 9.8f; //重力
     private float x, z;
+    private float L2;
 
     private CharacterController charaCon;//キャラクターコントローラー
     private Vector3 pos = Vector3.zero; //座標
@@ -42,6 +45,10 @@ public class Player : MonoBehaviour
     private Transform myCamera;
 
 
+    float defaultFov;
+    float zoom = 2.0f;
+    float waitTime = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +58,9 @@ public class Player : MonoBehaviour
         myCamera = GetComponentInChildren<Camera>().transform;	//　キャラクター視点のカメラの取得
         initCameraRot = myCamera.localRotation;
         cameraRot = myCamera.localRotation;
+
+        defaultFov = GetComponentInChildren<Camera>().fieldOfView;
+        
     }
 
     // Update is called once per frame
@@ -82,6 +92,30 @@ public class Player : MonoBehaviour
 
         pos.y -= g * Time.deltaTime;
         charaCon.Move(pos * Time.deltaTime);
+
+     
+
+
+        //ズーム
+        //if (Input.GetKey(KeyCode.B))
+        //if (Input.GetButton("LTrigger"))
+        if (Input.GetButton("joystick L1"))
+        //if (Input.GetKey(KeyCode.JoystickButton6))
+        {
+            System.Console.WriteLine("L2");
+            DOTween.To(() => Camera.main.fieldOfView,
+                fov => Camera.main.fieldOfView = fov,
+                defaultFov / zoom, 
+                waitTime);
+        }
+        else
+        {
+            DOTween.To(() => Camera.main.fieldOfView,
+                fov => Camera.main.fieldOfView = fov,
+                defaultFov / 1,
+                waitTime);
+        }
+
 
     }
     #region 回転お試し
