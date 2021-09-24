@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float speed = 5.0f; //速度
     public float jump = 2.0f; //ジャンプ
     public float g = 9.8f; //重力
+    private float moveS = 2.0f;
     private float x, z;
     private float L2;
 
@@ -20,14 +21,15 @@ public class Player : MonoBehaviour
 
     private Vector3 currentRot = Vector3.zero;//現在の回転方向
 
-    public float rotSpeed = 3.0f;
+    private float rotSpeed = 3.0f;
 
     private Quaternion charaRot;  //キャラクターの角度
     //マウス移動のスピード
     [SerializeField]
     private float mouseSpeed = 2.0f;
+
     //　キャラが回転中かどうか？
-    private bool charaRotFlag = false;
+    private bool charaRotFlag;
     //　カメラの角度
     private Quaternion cameraRot;
 
@@ -60,7 +62,8 @@ public class Player : MonoBehaviour
         cameraRot = myCamera.localRotation;
 
         defaultFov = GetComponentInChildren<Camera>().fieldOfView;
-        
+
+        charaRotFlag = false;
     }
 
     // Update is called once per frame
@@ -71,8 +74,8 @@ public class Player : MonoBehaviour
         //　視点の向きを変える
         RotateCamera();
 
-        x = Input.GetAxis("Horizontal")*2.0f;
-        z = Input.GetAxis("Vertical")*2.0f;
+        x = Input.GetAxis("Horizontal")*moveS;
+        z = Input.GetAxis("Vertical")*moveS;
         
         if (charaCon.isGrounded)
         {
@@ -97,11 +100,10 @@ public class Player : MonoBehaviour
 
 
         //ズーム
-        //if (Input.GetKey(KeyCode.B))
-        //if (Input.GetButton("LTrigger"))
         if (Input.GetButton("joystick L1"))
-        //if (Input.GetKey(KeyCode.JoystickButton6))
         {
+            rotSpeed = 2.0f;
+            moveS = 1.5f;
             System.Console.WriteLine("L2");
             DOTween.To(() => Camera.main.fieldOfView,
                 fov => Camera.main.fieldOfView = fov,
@@ -110,6 +112,8 @@ public class Player : MonoBehaviour
         }
         else
         {
+            rotSpeed = 3.0f;
+            moveS = 2.0f;
             DOTween.To(() => Camera.main.fieldOfView,
                 fov => Camera.main.fieldOfView = fov,
                 defaultFov / 1,
@@ -118,29 +122,6 @@ public class Player : MonoBehaviour
 
 
     }
-    #region 回転お試し
-    //protected void Rotate()
-    //{
-    //    // 現在の移動ベクトルを取得
-    //    Vector3 moveVelocity = charaCon.velocity;
-    //    moveVelocity.y = 0;
-
-    //    // 移動ベクトルが零ベクトル以外の場合は回転用ベクトルに設定
-    //    if (moveVelocity != Vector3.zero)
-    //    {
-    //        currentRot = moveVelocity;
-    //    }
-
-    //    // 角度と回転方向を取得
-    //    float value = Mathf.Min(1, rotate_speed * Time.deltaTime / Vector3.Angle(transform.forward, currentRot));
-    //    Vector3 newForward = Vector3.Slerp(transform.forward, currentRot, value);
-
-    //    if (newForward != Vector3.zero)
-    //    {
-    //        transform.rotation = Quaternion.LookRotation(newForward, transform.up);
-    //    }
-    //}
-    #endregion
 
     //キャラクターの角度を変更
     void RotateChara()
