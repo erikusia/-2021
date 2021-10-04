@@ -43,6 +43,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float cameraRotateLimit = 30f;
 
+    [SerializeField]
+    private Transform spine;
+
     //　キャラクター視点のカメラ
     private Transform myCamera;
 
@@ -123,6 +126,12 @@ public class Player : MonoBehaviour
 
     }
 
+    void LateUpdate()
+    {
+        //　ボーンをカメラの角度を向かせる
+        RotateBone();
+    }
+
     //キャラクターの角度を変更
     void RotateChara()
     {
@@ -165,5 +174,11 @@ public class Player : MonoBehaviour
         cameraRot = Quaternion.Euler(resultYRot, cameraRot.eulerAngles.y, cameraRot.eulerAngles.z);
         //　カメラの視点変更を実行
         myCamera.localRotation = Quaternion.Slerp(myCamera.localRotation, cameraRot, rotSpeed);
+    }
+
+    void RotateBone()
+    {
+        //　腰のボーンの角度をカメラの向きにする
+        spine.rotation = Quaternion.Euler(spine.eulerAngles.x, spine.eulerAngles.y, spine.eulerAngles.z + (-myCamera.localEulerAngles.x));
     }
 }
