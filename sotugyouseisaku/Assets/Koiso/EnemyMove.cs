@@ -5,12 +5,20 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
-    // 巡回地点オブジェクトを格納する配列
+    //巡回地点オブジェクトを格納する配列
     public Transform[] points;
-    // 巡回地点のオブジェクト数（初期値=0）
+    //巡回地点のオブジェクト数（初期値=0）
     private int destPoint = 0;
-    // NavMesh Agent コンポーネントを格納する変数
+    //NavMesh Agent コンポーネントを格納する変数
     private NavMeshAgent agent;
+
+    //プレイヤーの座標
+    [SerializeField] private Transform Target;
+    private Vector3 TargetPos;
+    //発見距離
+    [SerializeField] int Distance = 50;
+    //Rayが当たったオブジェクトの情報を入れる箱
+    RaycastHit hit;
 
     // ゲームスタート時の処理
     void Start()
@@ -44,5 +52,34 @@ public class EnemyMove : MonoBehaviour
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             // 次の巡回地点を設定する処理を実行
             GotoNextPoint();
+
+        //向きをプレイヤーに変える
+        //transform.rotation =
+        //Quaternion.LookRotation(Target.position - transform.position);
+
+        //ターゲット座標 + 位置調整
+        TargetPos = (Target.position - transform.position) + new Vector3(0, 1, 0);
+        //rayの生成
+        Ray ray = new Ray(transform.position, TargetPos);
+        //デバッグ用
+        Debug.DrawLine(ray.origin, hit.point, Color.red);
+        //当たり判定 
+        if (Physics.Raycast(ray, out hit, Distance))
+        {
+            //プレイヤータグに当たっていたら
+            if (hit.collider.tag == "Player")
+            {
+                Debug.Log("RayがPlayerに当たった");
+                //プレイヤーを追いかける
+                agent.destination = Target.position;
+            }
+            //発見していない場合
+            else
+            {
+                
+            }
+        }
+
+        Debug.Log("巡回地点は"+points[destPoint]);
     }
 }
