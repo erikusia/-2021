@@ -54,6 +54,9 @@ public class Player : MonoBehaviour
     float zoom = 2.0f;
     float waitTime = 0.5f;
 
+    [SerializeField]
+    private Transform spine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,9 +102,6 @@ public class Player : MonoBehaviour
         pos.y -= g * Time.deltaTime;
         charaCon.Move(pos * Time.deltaTime);
 
-     
-
-
         //ズーム
         if (Input.GetButton("joystick L1"))
         {
@@ -122,8 +122,19 @@ public class Player : MonoBehaviour
                 defaultFov / 1,
                 waitTime);
         }
+    }
+
+    void LateUpdate()
+    {
+        //　ボーンをカメラの角度を向かせる
+        RotateBone();
+    }
 
 
+    void RotateBone()
+    {
+        //　腰のボーンの角度をカメラの向きにする
+        spine.rotation = Quaternion.Euler(spine.eulerAngles.x, spine.eulerAngles.y, spine.eulerAngles.z + (-myCamera.localEulerAngles.x));
     }
 
     void LateUpdate()
@@ -182,3 +193,5 @@ public class Player : MonoBehaviour
         spine.rotation = Quaternion.Euler(spine.eulerAngles.x, spine.eulerAngles.y, spine.eulerAngles.z + (-myCamera.localEulerAngles.x));
     }
 }
+
+
