@@ -43,9 +43,6 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float cameraRotateLimit = 30f;
 
-    [SerializeField]
-    private Transform spine;
-
     //　キャラクター視点のカメラ
     private Transform myCamera;
 
@@ -53,6 +50,9 @@ public class Player : MonoBehaviour
     float defaultFov;
     float zoom = 2.0f;
     float waitTime = 0.5f;
+
+    [SerializeField]
+    private Transform spine;
 
     // Start is called before the first frame update
     void Start()
@@ -121,16 +121,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    void RotateBone()
-    {
-        //　腰のボーンの角度をカメラの向きにする
-        spine.rotation = Quaternion.Euler(spine.eulerAngles.x, spine.eulerAngles.y, spine.eulerAngles.z + (-myCamera.localEulerAngles.x));
-    }
-
     void LateUpdate()
     {
         //　ボーンをカメラの角度を向かせる
         RotateBone();
+    }
+
+
+    void RotateBone()
+    {
+        //　腰のボーンの角度をカメラの向きにする
+        spine.rotation = Quaternion.Euler(spine.eulerAngles.x, spine.eulerAngles.y, spine.eulerAngles.z + (-myCamera.localEulerAngles.x));
     }
 
     //キャラクターの角度を変更
