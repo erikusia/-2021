@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &95098557 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5015229664975504912, guid: 170110aa26fdec748ab0766b89aec058,
-    type: 3}
-  m_PrefabInstance: {fileID: 1209060307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &494438384
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,20 +552,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
-      propertyPath: muzzle
-      value: 
-      objectReference: {fileID: 95098557}
-    - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
-        type: 3}
       propertyPath: bulletPower
-      value: 2500
+      value: 10000
       objectReference: {fileID: 0}
-    - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 441303231135666528, guid: cc007c2efff27fa4d932923f709117c3,
-        type: 3}
     - target: {fileID: 8491898217854418865, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
       propertyPath: m_Name
@@ -772,6 +755,14 @@ PrefabInstance:
     - target: {fileID: 755299967, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629393987, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 829
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629393987, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -427
       objectReference: {fileID: 0}
     - target: {fileID: 1629393990, guid: 27ae5e6873f0c1d49acb79dbcf7c598b, type: 3}
       propertyPath: addForceBullet
