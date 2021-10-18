@@ -1,76 +1,429 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19043.1288; Version 2009; 64bit' Language: 'ja' Physical Memory: 8133 MB
+OS: 'Windows 10 Home; OS build 19043.1288; Version 2009; 64bit' Language: 'ja' Physical Memory: 16237 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2020.3.11f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku
+D:/sotugyouseisaku/sotugyouseisaku
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64875
-Successfully changed project path to: C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku
-C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku
+49363
+Successfully changed project path to: D:/sotugyouseisaku/sotugyouseisaku
+D:/sotugyouseisaku/sotugyouseisaku
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 101.13 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 33.95 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/sotugyouseisaku/sotugyouseisaku/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
     Vendor:   
-    VRAM:     6052 MB
-    Driver:   27.21.14.5638
+    VRAM:     5980 MB
+    Driver:   30.0.14.7212
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56516
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56632
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005634 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001486 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 56.12 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 32.90 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.051 seconds
+- Completed reload, in  0.861 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.027481 seconds.
+Registered in 0.003271 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file data-0000021EEFCCE5B0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFF4D820 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFD58280 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF5660020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF49F19C0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF0341990 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFC858E0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.Examples.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF0313030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF0313030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFF4D820 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4223070 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4223070 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF49F19C0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4237A80 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF54C0E90 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4249690 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.665 seconds
+- Completed reload, in  0.874 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.64 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2041 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 89.8 MB.
-System memory in use after: 89.9 MB.
+Unloading 2035 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.7 MB.
+System memory in use after: 91.8 MB.
 
-Unloading 78 unused Assets to reduce memory usage. Loaded Objects now: 2478.
-Total: 4.531500 ms (FindLiveObjects: 0.318300 ms CreateObjectMapping: 0.182400 ms MarkObjects: 3.666600 ms  DeleteObjects: 0.362100 ms)
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2477.
+Total: 2.290700 ms (FindLiveObjects: 0.233500 ms CreateObjectMapping: 0.137900 ms MarkObjects: 1.806400 ms  DeleteObjects: 0.111700 ms)
 
 ========================================================================
 Received Import Request.
+  path: Assets/Scenes/iwatani.unity
+  artifactKey: Guid(d7a1aaa8b7f505f4dab54afbb8830ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/iwatani.unity using Guid(d7a1aaa8b7f505f4dab54afbb8830ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a465ff6585ded95959de4310a28a0ffc') in 0.345374 seconds
+  Import took 0.348759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(504db83c3e859a94886385c67de77fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(504db83c3e859a94886385c67de77fc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7dda166baac507bd3f6f243dfe083e') in 0.004785 seconds
+  Import took 0.044595 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.922988 seconds.
+  path: Assets/Kan/Prefab
+  artifactKey: Guid(ace8782ed752913459bb1aacb3d1b400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kan/Prefab using Guid(ace8782ed752913459bb1aacb3d1b400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd657b67fa58bb3d2fb556f10b4c17cc9') in 0.005636 seconds
+  Import took 0.008727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.151722 seconds.
+  path: Assets/Kan/Prefab/Muzzle.prefab
+  artifactKey: Guid(170110aa26fdec748ab0766b89aec058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kan/Prefab/Muzzle.prefab using Guid(170110aa26fdec748ab0766b89aec058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0bd2fe83b8bc4a4fc8c5135a5b9ea13') in 0.042521 seconds
+  Import took 0.045231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.848915 seconds.
+  path: Assets/Iwatani/particler/blood.prefab
+  artifactKey: Guid(a8b38a1e74ef2de4e9a882cf517a4575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Iwatani/particler/blood.prefab using Guid(a8b38a1e74ef2de4e9a882cf517a4575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1241a8693a3ecefde9e46173df1d3183') in 0.026355 seconds
+  Import took 0.029216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Iwatani/particler/Particle System.prefab
+  artifactKey: Guid(6fa05eaa77bb90c4a8c1878628f6af2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Iwatani/particler/Particle System.prefab using Guid(6fa05eaa77bb90c4a8c1878628f6af2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9154a4eab7e6f335c0c30d2fc34cab4c') in 0.007346 seconds
+  Import took 0.018813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000280 seconds.
+  path: Assets/Iwatani/particler/Bullet2(1).prefab
+  artifactKey: Guid(f1e28d6483a162440a0d2170eae77bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Iwatani/particler/Bullet2(1).prefab using Guid(f1e28d6483a162440a0d2170eae77bb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '601135d385598f44ca28e9a83bf38cfd') in 0.099176 seconds
+  Import took 0.101951 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/Iwatani/particler/Point Light.prefab
+  artifactKey: Guid(c1701e09df146d440a80262f4842657f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Iwatani/particler/Point Light.prefab using Guid(c1701e09df146d440a80262f4842657f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '715ac44d97da325257cf1edc254719e9') in 0.005861 seconds
+  Import took 0.008417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 346.788443 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27606b96c1af2f5c37ae3b019e4f3474') in 0.006426 seconds
+  Import took 0.030950 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.397985 seconds.
+  path: Assets/Scenes/Koiso.unity
+  artifactKey: Guid(f682ea5c290abf941ad5e70ba9e9701c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Koiso.unity using Guid(f682ea5c290abf941ad5e70ba9e9701c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6b488b31915639a2814dfc67e89ba0') in 0.021657 seconds
+  Import took 0.050878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.218016 seconds.
   path: Assets/Scenes/Kawashita.unity
   artifactKey: Guid(7739b5753c8ffae4bb2ecc893a663cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Kawashita.unity using Guid(7739b5753c8ffae4bb2ecc893a663cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3a2e5d0a8419534ca6419cc81d8e57') in 0.018482 seconds
-  Import took 0.025053 seconds .
+Start importing Assets/Scenes/Kawashita.unity using Guid(7739b5753c8ffae4bb2ecc893a663cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b8dd61270c9cc8542dc303abb3f820b') in 0.005945 seconds
+  Import took 0.016422 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 16.664905 seconds.
+  path: Assets/Prefab/map.prefab
+  artifactKey: Guid(545ee1dbae7c2034c828b3a9d8331892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/map.prefab using Guid(545ee1dbae7c2034c828b3a9d8331892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '624488127793a159c1a18e1db25b5345') in 0.045184 seconds
+  Import took 0.068841 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.028616 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000021EF8768F90 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF41DF030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EFA947750 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4508030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021D285139D0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF42A0C10 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFC8E340 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.Examples.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4773030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4925010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4773030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF00B3FD0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF453C020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF5AF8020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8449010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF40DCED0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EFA9BBA00 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.779 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2010 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.4 MB.
+System memory in use after: 106.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2489.
+Total: 1.668600 ms (FindLiveObjects: 0.152400 ms CreateObjectMapping: 0.060800 ms MarkObjects: 1.440500 ms  DeleteObjects: 0.014100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 257.425778 seconds.
+  path: Assets/Scenes/Kan.unity
+  artifactKey: Guid(19c8025f01c21064d9e44738e2c40f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Kan.unity using Guid(19c8025f01c21064d9e44738e2c40f91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7593b76c51a9547fffa249968322574') in 0.012770 seconds
+  Import took 0.033079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.797256 seconds.
+  path: Assets/Scenes/iwatani.unity
+  artifactKey: Guid(d7a1aaa8b7f505f4dab54afbb8830ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/iwatani.unity using Guid(d7a1aaa8b7f505f4dab54afbb8830ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '013af412fa21496d31536d21051a8af4') in 0.002781 seconds
+  Import took 0.027898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.331182 seconds.
+  path: Assets/Kan/Script
+  artifactKey: Guid(75fcb2e2ada46e64585f981756ee83ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Kan/Script using Guid(75fcb2e2ada46e64585f981756ee83ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc442fb3e993973977c6cdcb6faa83e') in 0.025464 seconds
+  Import took 0.041586 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003010 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000021F1DB04070 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFF4D010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4826C50 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF7F04020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8D779C0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F48F60 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8C23700 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.Examples.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4773030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8449010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F48F60 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8E3AFE0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8EF31B0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F71B00 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4925010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F6A400 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8673020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.39 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.801 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2010 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.4 MB.
+System memory in use after: 106.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2492.
+Total: 1.954100 ms (FindLiveObjects: 0.186600 ms CreateObjectMapping: 0.074100 ms MarkObjects: 1.676700 ms  DeleteObjects: 0.015800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003009 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000021EF8DF09A0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFF4D010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFCCC5A0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF5F9A030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8D779C0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF5EC4020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8C2EF80 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.Examples.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4773030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8449010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F48F60 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8E3AFE0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF63C2010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F71B00 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8D7DC10 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F6A400 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8D5E010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.809 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2010 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.4 MB.
+System memory in use after: 106.5 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2495.
+Total: 2.252000 ms (FindLiveObjects: 0.237500 ms CreateObjectMapping: 0.091300 ms MarkObjects: 1.902700 ms  DeleteObjects: 0.019300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002992 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000021F1E60F980 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Assembly-CSharp.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFF4D010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EEFCCC5A0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF5F9A030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8D779C0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF5EC4020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021F1E89EDB0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UniRx.Examples.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EFA9C7010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8449010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8F48F60 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF939FA30 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF8BD8FC0 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF46C9520 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EFA704020 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF4BCE030 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000021EF7FEC010 doesn't match image D:\sotugyouseisaku\sotugyouseisaku\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.798 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2010 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.4 MB.
+System memory in use after: 106.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2498.
+Total: 1.737200 ms (FindLiveObjects: 0.192100 ms CreateObjectMapping: 0.094900 ms MarkObjects: 1.433700 ms  DeleteObjects: 0.015500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
