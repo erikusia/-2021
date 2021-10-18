@@ -1,16 +1,21 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.11f1 (99c7afb366b3) revision 10078127'; Using compiler version '192528614'; Build Type 'Release'
+<<<<<<< HEAD
 OS: 'Windows 10 Home; OS build 19042.1237; Version 2009; 64bit' Language: 'ja' Physical Memory: 16325 MB
+=======
+OS: 'Windows 10 Home; OS build 19043.1288; Version 2009; 64bit' Language: 'ja' Physical Memory: 8133 MB
+>>>>>>> 14ea965358f5c5c51ab6deab52c9f1a28de32af0
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.11f1\Editor\Unity.exe
+C:\Program Files\Unity\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
+<<<<<<< HEAD
 C:/Users/kaede/OneDrive/デスクトップ/team02/sotugyouseisaku
 -logFile
 Logs/AssetImportWorker0.log
@@ -24,12 +29,28 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/kaede/OneDrive/デスクトップ/team02/sotugyouseisaku/Assets
+=======
+C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51938
+Successfully changed project path to: C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku
+C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 88.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.11f1 (99c7afb366b3)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/KPC-018A1702/Desktop/sotugyouseisaku/sotugyouseisaku/Assets
+>>>>>>> 14ea965358f5c5c51ab6deab52c9f1a28de32af0
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
     Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
     Vendor:   
     VRAM:     6052 MB
+<<<<<<< HEAD
     Driver:   27.21.14.6677
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
@@ -109,5 +130,74 @@ System memory in use after: 90.6 MB.
 
 Unloading 73 unused Assets to reduce memory usage. Loaded Objects now: 2481.
 Total: 2.989700 ms (FindLiveObjects: 0.268300 ms CreateObjectMapping: 0.130900 ms MarkObjects: 2.485100 ms  DeleteObjects: 0.103000 ms)
+=======
+    Driver:   27.21.14.5638
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005633 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 74.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.451 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.032678 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.089 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.62 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2041 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.9 MB.
+
+Unloading 78 unused Assets to reduce memory usage. Loaded Objects now: 2478.
+Total: 4.139300 ms (FindLiveObjects: 0.496900 ms CreateObjectMapping: 0.202800 ms MarkObjects: 3.201300 ms  DeleteObjects: 0.235800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefab
+  artifactKey: Guid(b4def744855ddd14f8b901a0497f8acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab using Guid(b4def744855ddd14f8b901a0497f8acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc2ebba5c600da55afa1277e70f73449') in 0.027462 seconds
+  Import took 0.035498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001047 seconds.
+  path: Assets/Prefab/Soldier.prefab
+  artifactKey: Guid(f09c69e47c7c69c44a7f7fccb1f63a42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Soldier.prefab using Guid(f09c69e47c7c69c44a7f7fccb1f63a42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c9999854338c8b14ed9b63843727595') in 0.382789 seconds
+  Import took 0.393239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.869836 seconds.
+  path: Assets/Prefab/map.prefab
+  artifactKey: Guid(545ee1dbae7c2034c828b3a9d8331892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/map.prefab using Guid(545ee1dbae7c2034c828b3a9d8331892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58b7abdb270bc7cf3e471158e7e45438') in 0.046925 seconds
+  Import took 0.056039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010746 seconds.
+  path: Assets/Prefab/map.prefab
+  artifactKey: Guid(545ee1dbae7c2034c828b3a9d8331892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/map.prefab using Guid(545ee1dbae7c2034c828b3a9d8331892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58b7abdb270bc7cf3e471158e7e45438') in 0.014376 seconds
+  Import took 0.024425 seconds .
+>>>>>>> 14ea965358f5c5c51ab6deab52c9f1a28de32af0
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
