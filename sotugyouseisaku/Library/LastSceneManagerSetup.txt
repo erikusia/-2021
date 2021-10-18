@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/kaede.unity
-=======
-- path: Assets/Scenes/Kawashita.unity
->>>>>>> 14ea965358f5c5c51ab6deab52c9f1a28de32af0
   isLoaded: 1
   isActive: 1
   isSubScene: 0

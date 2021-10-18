@@ -24,9 +24,9 @@ public class Player : MonoBehaviour
     private float rotSpeed = 3.0f;
 
     private Quaternion charaRot;  //キャラクターの角度
-    //マウス移動のスピード
-    [SerializeField]
-    private float mouseSpeed = 2.0f;
+
+    //カメラ移動のスピード
+    private float cameraSpeed = 0.5f;
 
     //　キャラが回転中かどうか？
     private bool charaRotFlag;
@@ -77,9 +77,9 @@ public class Player : MonoBehaviour
         //　視点の向きを変える
         RotateCamera();
 
-        x = Input.GetAxis("Horizontal")*moveS;
-        z = Input.GetAxis("Vertical")*moveS;
-        
+        x = Input.GetAxis("Horizontal") * moveS;
+        z = Input.GetAxis("Vertical") * moveS;
+
         if (charaCon.isGrounded)
         {
             pos = new Vector3(x, 0, z);
@@ -102,17 +102,19 @@ public class Player : MonoBehaviour
         //ズーム
         if (Input.GetButton("joystick L1"))
         {
-            rotSpeed = 2.0f;
+            //ズーム中
+            cameraSpeed = 0.1f;
             moveS = 1.5f;
             System.Console.WriteLine("L2");
             DOTween.To(() => Camera.main.fieldOfView,
                 fov => Camera.main.fieldOfView = fov,
-                defaultFov / zoom, 
+                defaultFov / zoom,
                 waitTime);
         }
         else
         {
-            rotSpeed = 3.0f;
+            //ズームしてない時
+            cameraSpeed = 0.25f;
             moveS = 2.0f;
             DOTween.To(() => Camera.main.fieldOfView,
                 fov => Camera.main.fieldOfView = fov,
@@ -121,13 +123,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    void LateUpdate()
-    {
-        //　ボーンをカメラの角度を向かせる
-        RotateBone();
-    }
+    //void LateUpdate()
+    //{
+    //    //　ボーンをカメラの角度を向かせる
+    //    RotateBone();
+    //}
 
 
+    /// <summary>
+    /// 腰のボーンの回転
+    /// </summary>
     void RotateBone()
     {
         //　腰のボーンの角度をカメラの向きにする
@@ -138,7 +143,7 @@ public class Player : MonoBehaviour
     void RotateChara()
     {
         //横の回転値を計算
-        float yRot = Input.GetAxis("Horizontal2")*0.1f;
+        float yRot = Input.GetAxis("Horizontal2") * cameraSpeed;
 
         charaRot *= Quaternion.Euler(0f, yRot, 0f);
 
@@ -160,8 +165,8 @@ public class Player : MonoBehaviour
     //　カメラの角度を変更
     void RotateCamera()
     {
-
-        float xRotate = Input.GetAxis("Vertical2")*0.1f;
+        //縦の回転値
+        float xRotate = Input.GetAxis("Vertical2") * cameraSpeed;
 
         //　マウスを上に移動した時に上を向かせたいなら反対方向に角度を反転させる
         if (cameraRotForward)
