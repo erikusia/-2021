@@ -319,6 +319,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2902952178807016516, guid: f09c69e47c7c69c44a7f7fccb1f63a42,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.582
+      objectReference: {fileID: 0}
     - target: {fileID: 2902952178832909288, guid: f09c69e47c7c69c44a7f7fccb1f63a42,
         type: 3}
       propertyPath: spine

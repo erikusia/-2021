@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
     void RotateBone()
     {
         //　腰のボーンの角度をカメラの向きにする
-        spine.rotation = Quaternion.Euler(spine.eulerAngles.x, spine.eulerAngles.y, spine.eulerAngles.z + (-myCamera.localEulerAngles.x));
+        spine.rotation = Quaternion.Euler(spine.eulerAngles.x, spine.eulerAngles.y - (myCamera.localEulerAngles.x), spine.eulerAngles.z + (-myCamera.localEulerAngles.x));
     }
 
     //キャラクターの角度を変更
