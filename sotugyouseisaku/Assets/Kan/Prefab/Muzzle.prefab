@@ -43,12 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8dbc2db7c4e334ba7e555f679f4315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 441303231135666528, guid: cc007c2efff27fa4d932923f709117c3,
+  bulletPrefab: {fileID: 5661958136614741884, guid: 8ee548ff18577d6458b1cf0734250d2a,
     type: 3}
   muzzle: {fileID: 5015229664975504912}
   bulletPower: 2500
   maxBullets: 30
   bulletCount: 30
+  dis: {x: 0, y: 0, z: 0}
   rate: 10
   reloadTime: 1.5
   rlTime: 0
