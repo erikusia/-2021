@@ -126,18 +126,9 @@ public class Player : MonoBehaviour
         
     }
 
-    //private void OnTriggerEnter(Collider collider)
-    //{
-    //    if(collider.gameObject.tag == "Enemy")
-    //    {
-    //        hp = hp - 10;
-    //    }
-    //}
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        
-        if (collision.gameObject.name == "Cube")
+        if (collider.gameObject.tag == "Enemy")
         {
             hp = hp - 10;
             Debug.Log(hp);
