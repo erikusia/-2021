@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
-
+    public int hp;
     public float speed = 5.0f; //速度
     public float jump = 2.0f; //ジャンプ
     public float g = 9.8f; //重力
@@ -67,6 +67,8 @@ public class Player : MonoBehaviour
         defaultFov = GetComponentInChildren<Camera>().fieldOfView;
 
         charaRotFlag = false;
+
+        hp = 100;
     }
 
     // Update is called once per frame
@@ -100,7 +102,7 @@ public class Player : MonoBehaviour
         charaCon.Move(pos * Time.deltaTime);
 
         //ズーム
-        if (Input.GetButton("joystick L1"))
+        if (Input.GetAxis("joystick L2") > 0)
         {
             //ズーム中
             cameraSpeed = 0.1f;
@@ -120,6 +122,26 @@ public class Player : MonoBehaviour
                 fov => Camera.main.fieldOfView = fov,
                 defaultFov / 1,
                 waitTime);
+        }
+        
+    }
+
+    //private void OnTriggerEnter(Collider collider)
+    //{
+    //    if(collider.gameObject.tag == "Enemy")
+    //    {
+    //        hp = hp - 10;
+    //    }
+    //}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.name == "Cube")
+        {
+            hp = hp - 10;
+            Debug.Log(hp);
+            Debug.Log("接触");
         }
     }
 

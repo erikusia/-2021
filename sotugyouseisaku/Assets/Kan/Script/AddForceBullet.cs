@@ -55,7 +55,7 @@ public class AddForceBullet : MonoBehaviour
         {
             Vector3 distanc = hit.point - transform.position;
             dis = distanc.normalized;
-            Debug.Log(dis);
+            //Debug.Log(dis);
             transform.rotation = Quaternion.LookRotation(distanc);
         }
         else
