@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
-  - Attack
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,7 +14,7 @@ TagManager:
   - Water
   - UI
   - Bullet
-  - 
+  - Enemy
   - 
   - 
   - 
