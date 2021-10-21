@@ -1435,13 +1435,13 @@ PrefabInstance:
     - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
       propertyPath: bulletPower
-      value: 2500
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 441303231135666528, guid: cc007c2efff27fa4d932923f709117c3,
+      objectReference: {fileID: 7988535350831265804, guid: 49876d039843f6249a221fd7773d9057,
         type: 3}
     - target: {fileID: 8491898217854418865, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
