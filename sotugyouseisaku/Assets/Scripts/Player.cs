@@ -7,10 +7,13 @@ using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
-    public int Playerhp;
-    int hp;
-    public float speed = 5.0f; //速度
-    public float jump = 2.0f; //ジャンプ
+    [SerializeField]
+    private int Playerhp;
+    public int hp;
+    [SerializeField]
+    private float speed = 5.0f; //速度
+    [SerializeField]
+    private float jump = 2.0f; //ジャンプ
     public float g = 9.8f; //重力
     private float moveS = 2.0f;
     private float x, z;
