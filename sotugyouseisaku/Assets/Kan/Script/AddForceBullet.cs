@@ -12,11 +12,13 @@ public class AddForceBullet : MonoBehaviour
     private Transform muzzle;
     //　弾を飛ばす力
     [SerializeField]
-    private float bulletPower = 500f;
+    private float bulletPower = 5f;
     //　弾数
     [SerializeField]
     private float maxBullets = 30f;
     public float bulletCount = 30f;
+    [SerializeField]
+    private Vector3 dis;
 
     private Vector3 rayCameraPos;
     private int count = 0;
@@ -31,6 +33,7 @@ public class AddForceBullet : MonoBehaviour
     {
         rayCameraPos = new Vector3(Screen.width / 2, Screen.height / 2, 0.1f);
         bulletCount = maxBullets;
+        dis = new Vector3(1, 1, 1);
     }
 
     void Update()
@@ -51,6 +54,15 @@ public class AddForceBullet : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 1000.0f, layerMask))
         {
             Vector3 distanc = hit.point - transform.position;
+            dis = distanc.normalized;
+            //Debug.Log(dis);
+            transform.rotation = Quaternion.LookRotation(distanc);
+        }
+        else
+        {
+            var p = Camera.main.transform.forward * 1000.0f;
+            Vector3 distanc = p - transform.position;
+            dis = distanc.normalized;
             transform.rotation = Quaternion.LookRotation(distanc);
         }
 
@@ -77,7 +89,7 @@ public class AddForceBullet : MonoBehaviour
         }
 
         //　マウスの左クリックで撃つ
-        if (Input.GetButton("joystick R1"))
+        if (Input.GetAxis("joystick R2") > 0)
         {
             if (count % rate == 0)
             {
@@ -92,7 +104,8 @@ public class AddForceBullet : MonoBehaviour
     void Shot()
     {
         var bulletInstance = Instantiate<GameObject>(bulletPrefab, muzzle.position, bulletPrefab.transform.rotation);
-        bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+        // bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+        bulletInstance.GetComponent<BulletAttack>().speed = dis * bulletPower;
         Destroy(bulletInstance, 5f);
     }
 }
