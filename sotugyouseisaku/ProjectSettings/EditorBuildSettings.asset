@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/kaede.unity
+    guid: fa8954cd8b9f784478dc9cd0bc4c0853
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 11389f3e2459dfb419081d49de50e22e
   m_configObjects: {}

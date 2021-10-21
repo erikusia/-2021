@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 using DG.Tweening;
 
 public class Player : MonoBehaviour
 {
-    public int hp;
+    public int Playerhp;
+    int hp;
     public float speed = 5.0f; //速度
     public float jump = 2.0f; //ジャンプ
     public float g = 9.8f; //重力
@@ -68,7 +70,7 @@ public class Player : MonoBehaviour
 
         charaRotFlag = false;
 
-        hp = 100;
+        hp = Playerhp;
     }
 
     // Update is called once per frame
@@ -123,16 +125,16 @@ public class Player : MonoBehaviour
                 defaultFov / 1,
                 waitTime);
         }
-        
+
+        Death();
     }
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Enemy")
+        if (collider.gameObject.tag == "Attack")
         {
             hp = hp - 10;
-            Debug.Log(hp);
-            Debug.Log("接触");
+            Debug.Log("プレイヤーHP : " + hp);
         }
     }
 
@@ -194,6 +196,14 @@ public class Player : MonoBehaviour
         cameraRot = Quaternion.Euler(resultYRot, cameraRot.eulerAngles.y, cameraRot.eulerAngles.z);
         //　カメラの視点変更を実行
         myCamera.localRotation = Quaternion.Slerp(myCamera.localRotation, cameraRot, rotSpeed);
+    }
+
+    void Death()
+    {
+        if(hp <= 0 )
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
 
