@@ -879,12 +879,12 @@ PrefabInstance:
         type: 3}
       propertyPath: points.Array.data[0]
       value: 
-      objectReference: {fileID: 575462858}
+      objectReference: {fileID: 1446954395}
     - target: {fileID: 6170542727197119046, guid: 29241caa5870b624c9eeb8d4e83e66d8,
         type: 3}
       propertyPath: points.Array.data[1]
       value: 
-      objectReference: {fileID: 839510569}
+      objectReference: {fileID: 729819821}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29241caa5870b624c9eeb8d4e83e66d8, type: 3}
 --- !u!43 &549204570
