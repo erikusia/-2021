@@ -39,7 +39,7 @@ public class EnemyMove : MonoBehaviour
     bool isAttack = true;
     bool isLook = false;
 
-    public static int death=0;
+    [SerializeField] private EnemyNum enemyNum;
     
 
     void Start()
@@ -71,6 +71,11 @@ public class EnemyMove : MonoBehaviour
 
     void PlayerChase()
     {
+        if (isAttack)
+        {
+            //向きをプレイヤーに変える
+            transform.rotation = Quaternion.LookRotation(player.position - transform.position);
+        }
         state = EnemyState.CHASE;
         animator.SetTrigger("chase");
         agent.destination = player.position;
@@ -169,11 +174,7 @@ public class EnemyMove : MonoBehaviour
         //        break;
         //}
 
-        if (isAttack)
-        {
-            //向きをプレイヤーに変える
-            transform.rotation = Quaternion.LookRotation(player.position - transform.position);
-        }
+       
 
         if (Physics.Raycast(ray, out hit, chaseDistance))
         {
@@ -197,15 +198,14 @@ public class EnemyMove : MonoBehaviour
         //デバッグ用
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            death++;
+            Call();
         }
     }
 
-    public static void getDeath()
+    private void Call()
     {
-        return deathNum;
+        enemyNum.DeathNum();
     }
-
 
 
 }
