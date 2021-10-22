@@ -117,7 +117,7 @@ public class AddForceBullet : MonoBehaviour
         audio.PlayOneShot(gunSe);
         var bulletInstance = Instantiate<GameObject>(bulletPrefab, muzzle.position, Quaternion.LookRotation(dis));
         // bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
-        //bulletInstance.GetComponent<BulletAttack>().speed = dis * bulletPower;
+        bulletInstance.GetComponent<BulletAttack>().speed = dis * bulletPower;
         Destroy(bulletInstance, 5f);
     }
 }
