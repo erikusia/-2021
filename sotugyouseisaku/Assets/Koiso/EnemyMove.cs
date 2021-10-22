@@ -39,6 +39,9 @@ public class EnemyMove : MonoBehaviour
     bool isAttack = true;
     bool isLook = false;
 
+    public static int death=0;
+    
+
     void Start()
     {
         attack.SetActive(false);
@@ -147,6 +150,7 @@ public class EnemyMove : MonoBehaviour
     // ゲーム実行中の繰り返し処理
     void Update()
     {
+
         playerPos = (player.position - transform.position) + new Vector3(0, 1, 0);
         Ray ray = new Ray(transform.position, playerPos);
         //デバッグ用
@@ -193,9 +197,15 @@ public class EnemyMove : MonoBehaviour
         //デバッグ用
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Damage();
+            death++;
         }
     }
+
+    public static void getDeath()
+    {
+        return deathNum;
+    }
+
 
 
 }
