@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/iwatani.unity
+- path: Assets/Scenes/Kawashita.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
