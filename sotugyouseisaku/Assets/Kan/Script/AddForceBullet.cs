@@ -21,9 +21,13 @@ public class AddForceBullet : MonoBehaviour
     private Vector3 dis;
 
     private Vector3 rayCameraPos;
-    private int count = 0;
+    private float count = 0;
     [SerializeField]
-    private int rate = 20;
+    private float shotSpeed = 0.1f;
+
+    [SerializeField]
+    private AudioClip gunSe;
+    private new AudioSource audio = null;
 
     //リロード時間
     public float reloadTime = 1.5f;
@@ -34,6 +38,7 @@ public class AddForceBullet : MonoBehaviour
         rayCameraPos = new Vector3(Screen.width / 2, Screen.height / 2, 0.1f);
         bulletCount = maxBullets;
         dis = new Vector3(1, 1, 1);
+        audio = transform.root.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -91,18 +96,20 @@ public class AddForceBullet : MonoBehaviour
         //　マウスの左クリックで撃つ
         if (Input.GetAxis("joystick R2") > 0)
         {
-            if (count % rate == 0)
+            if (count > shotSpeed)
             {
                 Shot();
                 bulletCount--;
+                count = 0.0f;
             }
-            count += 1;
+            count += Time.deltaTime;
         }
     }
 
     //　敵を撃つ
     void Shot()
     {
+        audio.PlayOneShot(gunSe);
         var bulletInstance = Instantiate<GameObject>(bulletPrefab, muzzle.position, Quaternion.LookRotation(dis));
         // bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
         //bulletInstance.GetComponent<BulletAttack>().speed = dis * bulletPower;
