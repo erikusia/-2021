@@ -57,6 +57,7 @@ public class EnemyMove : MonoBehaviour
         if (other.gameObject.tag == "Bullet")
         {
             Damage();
+            Debug.Log("“GHP : " + hp);
         }
     }
 
