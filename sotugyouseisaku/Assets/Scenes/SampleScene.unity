@@ -1310,6 +1310,15 @@ PrefabInstance:
       propertyPath: m_SpotAngle
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 2080124947, guid: f09c69e47c7c69c44a7f7fccb1f63a42, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717419644691747525, guid: f09c69e47c7c69c44a7f7fccb1f63a42,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2902952179103589191, guid: f09c69e47c7c69c44a7f7fccb1f63a42,
         type: 3}
       propertyPath: m_Name
