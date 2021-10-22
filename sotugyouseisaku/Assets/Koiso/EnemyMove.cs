@@ -33,6 +33,8 @@ public class EnemyMove : MonoBehaviour
     [SerializeField] int attackDistance = 0;
     RaycastHit hit;
 
+    private Animator animator;
+
     bool isChase=true;
     bool isAttack = true;
     bool isLook = false;
@@ -43,6 +45,7 @@ public class EnemyMove : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         GotoNextPoint();
         agent.speed = speed;
+        animator = GetComponent<Animator>();
     }
 
     void GotoNextPoint()
@@ -56,6 +59,8 @@ public class EnemyMove : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
+            Vector3 hitPos = other.ClosestPointOnBounds(this.transform.position);
+            Instantiate(bloodObj,hitPos,Quaternion.identity);
             Damage();
             Debug.Log("敵HP : " + hp);
         }
@@ -64,28 +69,31 @@ public class EnemyMove : MonoBehaviour
     void PlayerChase()
     {
         state = EnemyState.CHASE;
+        animator.SetTrigger("chase");
         agent.destination = player.position;
     }
 
     void Patrol()
     {
         state = EnemyState.PATROL;
+        animator.SetTrigger("patrol");
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             GotoNextPoint();
     }
-
     void Damage()
     {
         state = EnemyState.DAMAGE;
         if(hp <= 0)
         {
-            Destroy(this.gameObject);
+            agent.velocity = Vector3.zero;
+            agent.isStopped = true;
+            animator.SetTrigger("death");
+            StartCoroutine("Deathtimer", 3);
+            
         }
         else
         {
-            hp -= 5;
-            //血しぶきエフェクト
-            //Instantiate(bloodObj, this.transform.position, Quaternion.identity);            
+            hp -= 5;            
         }       
         StartCoroutine("Colortimer", 0.1f);
     }
@@ -124,6 +132,18 @@ public class EnemyMove : MonoBehaviour
         //mat.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
+    IEnumerator Deathtimer(int time)
+    {
+        while (time >= 0)
+        {
+            //mat.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+            yield return new WaitForSeconds(1);
+            --time;
+        }
+        Destroy(this.gameObject);
+        //mat.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    }
+
     // ゲーム実行中の繰り返し処理
     void Update()
     {
@@ -145,6 +165,12 @@ public class EnemyMove : MonoBehaviour
         //        break;
         //}
 
+        if (isAttack)
+        {
+            //向きをプレイヤーに変える
+            transform.rotation = Quaternion.LookRotation(player.position - transform.position);
+        }
+
         if (Physics.Raycast(ray, out hit, chaseDistance))
         {
             if (hit.collider.tag == "Player")
@@ -154,6 +180,7 @@ public class EnemyMove : MonoBehaviour
                     if (isAttack)
                     {
                         StartCoroutine("Attacktimer", 1);
+                        animator.SetTrigger("attack");
                         isAttack = false;
                     }
                 }
