@@ -71,6 +71,12 @@ public class EnemyMove : MonoBehaviour
         state = EnemyState.CHASE;
         animator.SetTrigger("chase");
         agent.destination = player.position;
+
+        if (isAttack)
+        {
+            //向きをプレイヤーに変える
+            transform.rotation = Quaternion.LookRotation(player.position - transform.position);
+        }
     }
 
     void Patrol()
@@ -165,11 +171,7 @@ public class EnemyMove : MonoBehaviour
         //        break;
         //}
 
-        if (isAttack)
-        {
-            //向きをプレイヤーに変える
-            transform.rotation = Quaternion.LookRotation(player.position - transform.position);
-        }
+
 
         if (Physics.Raycast(ray, out hit, chaseDistance))
         {
