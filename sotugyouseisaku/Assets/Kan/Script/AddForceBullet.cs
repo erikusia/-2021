@@ -103,7 +103,7 @@ public class AddForceBullet : MonoBehaviour
     //Å@ìGÇåÇÇ¬
     void Shot()
     {
-        var bulletInstance = Instantiate<GameObject>(bulletPrefab, muzzle.position, bulletPrefab.transform.rotation);
+        var bulletInstance = Instantiate<GameObject>(bulletPrefab, muzzle.position, Quaternion.LookRotation(dis));
         // bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
         bulletInstance.GetComponent<BulletAttack>().speed = dis * bulletPower;
         Destroy(bulletInstance, 5f);
