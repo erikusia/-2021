@@ -24,7 +24,7 @@ public class AddForceBullet : MonoBehaviour
     private float count = 0;
     [SerializeField]
     private float shotSpeed = 0.1f;
-
+    //発射音
     [SerializeField]
     private AudioClip gunSe;
     private new AudioSource audio = null;
@@ -33,6 +33,9 @@ public class AddForceBullet : MonoBehaviour
     public float reloadTime = 1.5f;
     public float rlTime = 0.0f;
     public bool isReload = false;
+    //リロードSE
+    [SerializeField]
+    private AudioClip reloadSe;
     void Start()
     {
         rayCameraPos = new Vector3(Screen.width / 2, Screen.height / 2, 0.1f);
@@ -83,8 +86,10 @@ public class AddForceBullet : MonoBehaviour
         }
 
         //リロード
-        if (Input.GetButton("joystick X"))
+        if (Input.GetButton("joystick X") && maxBullets > bulletCount)
         {
+            if(!isReload)
+                audio.PlayOneShot(reloadSe);
             isReload = true;
         }
 
