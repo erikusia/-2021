@@ -12,7 +12,7 @@ public class AddForceBullet : MonoBehaviour
     private Transform muzzle;
     //Å@íeÇîÚÇŒÇ∑óÕ
     [SerializeField]
-    private float bulletPower = 5f;
+    private float bulletPower = 1000f;
     //Å@íeêî
     [SerializeField]
     private float maxBullets = 30f;
@@ -116,8 +116,8 @@ public class AddForceBullet : MonoBehaviour
     {
         audio.PlayOneShot(gunSe);
         var bulletInstance = Instantiate<GameObject>(bulletPrefab, muzzle.position, Quaternion.LookRotation(dis));
-        // bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
-        bulletInstance.GetComponent<BulletAttack>().speed = dis * bulletPower;
+        bulletInstance.GetComponent<Rigidbody>().AddForce(bulletInstance.transform.forward * bulletPower);
+        //bulletInstance.GetComponent<BulletAttack>().speed = dis * bulletPower;
         Destroy(bulletInstance, 5f);
     }
 }
