@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public class SpiderEnemyMove : MonoBehaviour
 {
     enum EnemyState
@@ -27,6 +28,8 @@ public class SpiderEnemyMove : MonoBehaviour
     //NavMesh Agent コンポーネントを格納する変数
     private NavMeshAgent agent;
 
+    private Animator animator;
+
     //プレイヤーの座標
     [SerializeField] private Transform player;
     private Vector3 playerPos;
@@ -38,7 +41,8 @@ public class SpiderEnemyMove : MonoBehaviour
     RaycastHit hit;
 
     bool isChase = true;
-    bool isAttack = true;
+    bool isAttack = false;
+    bool isAttackCoolTime = false;
     bool isLook = false;
 
     // ゲームスタート時の処理
@@ -51,7 +55,7 @@ public class SpiderEnemyMove : MonoBehaviour
         GotoNextPoint();
 
         agent.speed = speed;
-
+        animator = GetComponent<Animator>();
     }
 
     // 次の巡回地点を設定する処理
@@ -77,8 +81,7 @@ public class SpiderEnemyMove : MonoBehaviour
     void Update()
     {
         //向きをプレイヤーに変える
-        //transform.rotation =
-        //Quaternion.LookRotation(player.position - transform.position);
+        transform.rotation =Quaternion.LookRotation(player.position - transform.position);
 
         //ターゲット座標 + 位置調整
         playerPos = (player.position - transform.position) + new Vector3(0, 1, 0);
@@ -87,19 +90,6 @@ public class SpiderEnemyMove : MonoBehaviour
         //デバッグ用
         Debug.DrawLine(ray.origin, hit.point, Color.red);
 
-        ////アニメーション
-        //switch(EnemyState)
-        //{
-        //    case EnemyState.PATROL:
-        //        break;
-        //    case EnemyState.CHASE:
-        //        break;
-        //    case EnemyState.DAMAGE:
-        //        break;
-        //    case EnemyState.ATTACK:
-        //        break;
-        //}
-
         if (Physics.Raycast(ray, out hit, chaseDistance))
         {
             //プレイヤータグに当たっていたら
@@ -107,10 +97,10 @@ public class SpiderEnemyMove : MonoBehaviour
             {
                 if (Physics.Raycast(ray, out hit, attackDistance))
                 {
-                    if (isAttack)
+                    if (isAttackCoolTime)
                     {
                         StartCoroutine("Attacktimer", 1);
-                        isAttack = false;
+                        isAttackCoolTime = true;
                     }
                 }
                 PlayerChase();
@@ -118,6 +108,10 @@ public class SpiderEnemyMove : MonoBehaviour
             else Patrol();
         }
         else Patrol();
+
+        if(isAttack)
+        {
+        }
 
         //デバッグ用
         if (Input.GetKeyDown(KeyCode.Space))
@@ -129,6 +123,7 @@ public class SpiderEnemyMove : MonoBehaviour
     void PlayerChase()
     {
         state = EnemyState.CHASE;
+        animator.SetTrigger("chase");
         //プレイヤーを追いかける
         agent.destination = player.position;
     }
@@ -136,6 +131,7 @@ public class SpiderEnemyMove : MonoBehaviour
     void Patrol()
     {
         state = EnemyState.PATROL;
+        animator.SetTrigger("patrol");
         // エージェントが現在の巡回地点に到達したら
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             // 次の巡回地点を設定する処理を実行
@@ -160,33 +156,36 @@ public class SpiderEnemyMove : MonoBehaviour
     IEnumerator Attacktimer(int time)
     {
         state = EnemyState.ATTACK;
+        animator.SetTrigger("attack");
         attack.SetActive(true);
-        Material mat = this.GetComponent<Renderer>().material;
+        //Material mat = this.GetComponent<Renderer>().material;
         while (time >= 0)
         {
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
-            mat.color = new Color(0.0f, 0.0f, 1.0f, 1.0f);
+            //mat.color = new Color(0.0f, 0.0f, 1.0f, 1.0f);
             yield return new WaitForSeconds(1f);
             Debug.Log(time);
             --time;
+            isAttack = true;
             attack.SetActive(false);
         }
-        mat.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        //mat.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
         agent.isStopped = false;
-        isAttack = true;
+        isAttackCoolTime = false;
+        isAttack = false;
     }
 
     //状態を表す点滅
     IEnumerator Colortimer(int time)
     {
-        Material mat = this.GetComponent<Renderer>().material;
+        //Material mat = this.GetComponent<Renderer>().material;
         while (time >= 0)
         {
-            mat.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+            //mat.color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
             yield return new WaitForSeconds(0.1f);
             --time;
         }
-        mat.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        //mat.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 }
