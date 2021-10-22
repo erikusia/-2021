@@ -1630,13 +1630,23 @@ PrefabInstance:
       objectReference: {fileID: 7913096599962567919}
     - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
+      propertyPath: reloadSe
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a02262341f4c7949a30e7d692aab5d7, type: 3}
+    - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
+        type: 3}
       propertyPath: shotSpeed
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
+      propertyPath: reloadTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
+        type: 3}
       propertyPath: bulletPower
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5222049888820256189, guid: 170110aa26fdec748ab0766b89aec058,
         type: 3}
