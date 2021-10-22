@@ -40,6 +40,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.log
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -73,8 +74,3 @@ crashlytics-build.properties
 Icon?
 ehthumbs.db
 Thumbs.db
-SnakeEaterMan/Library/Artifacts/f6/f6d93f021663d19a727c5bbedc05274e
-SnakeEaterMan/Library/Artifacts/4e/4eb1a019d988c6a12d1c3315db39ef2d
-SnakeEaterMan/Library/Artifacts/0d/0d343b075808f3dd8db55b90a092ce64
-SnakeEaterMan/Library/Artifacts/34/34cd76d902086ede328e790de9952fbd
-SnakeEaterMan/Library/Artifacts/90/901e8ed1bd48fac63009381f14374850

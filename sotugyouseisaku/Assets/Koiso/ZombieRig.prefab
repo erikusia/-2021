@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   hp: 100
-  speed: 1
+  speed: 8
   bloodObj: {fileID: 0}
   attack: {fileID: 8239137318003051679}
   points:
@@ -1596,7 +1596,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 1
+  m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
