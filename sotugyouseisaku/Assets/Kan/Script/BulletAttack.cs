@@ -9,13 +9,13 @@ public class BulletAttack : MonoBehaviour
     {
         
     }
-    private void Update()
-    {
-        //Debug.Log(speed);
-        var v = transform.position;
-        v += speed;
-        transform.position = v;
-    }
+    //private void Update()
+    //{
+    //    //Debug.Log(speed);
+    //    var v = transform.position;
+    //    v += speed;
+    //    transform.position = v;
+    //}
     private void OnCollisionEnter(Collision col)
     {
         if(col.gameObject.tag == "Enemy" || col.gameObject.tag == "Target")
